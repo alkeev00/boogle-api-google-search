@@ -31,7 +31,7 @@ export default function ImageSearchResults({ results }) {
 				))}
 			</div>
 			<div className='ml-16'>
-				<Suspense>
+				<Suspense fallback={<>Loading...</>}>
 					<PaginationButtons />
 				</Suspense>
 			</div>

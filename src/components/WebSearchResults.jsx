@@ -24,7 +24,7 @@ export default function WebSearchResults({ results }) {
 					<p className='text-pink-100'>{Parser(result.htmlSnippet)}</p>
 				</div>
 			))}
-			<Suspense>
+			<Suspense fallback={<>Loading...</>}>
 				<PaginationButtons />
 			</Suspense>
 		</div>
