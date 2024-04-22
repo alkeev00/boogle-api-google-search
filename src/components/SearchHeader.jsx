@@ -29,9 +29,8 @@ const SearchHeader = () => {
 					API Search Engine
 				</Link>
 			</div>
-			<Suspense fallback={<>Loading...</>}>
-				<SearchHeaderOptions />
-			</Suspense>
+
+			<SearchHeaderOptions />
 		</header>
 	)
 }
