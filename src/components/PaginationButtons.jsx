@@ -2,7 +2,6 @@
 
 import Link from 'next/link'
 import { usePathname, useSearchParams } from 'next/navigation'
-import { BsChevronLeft, BsChevronRight } from 'react-icons/bs'
 
 export default function PaginationButtons() {
 	const pathname = usePathname()

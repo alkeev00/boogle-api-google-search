@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import React from 'react'
+import React, { Suspense } from 'react'
 import SearchBox from './SearchBox'
 import { FaGoogle } from 'react-icons/fa'
 import SearchHeaderOptions from './SearchHeaderOptions'
@@ -29,7 +29,9 @@ const SearchHeader = () => {
 					API Search Engine
 				</Link>
 			</div>
-			<SearchHeaderOptions />
+			<Suspense>
+				<SearchHeaderOptions />
+			</Suspense>
 		</header>
 	)
 }

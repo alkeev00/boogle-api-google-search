@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import React from 'react'
+import React, { Suspense } from 'react'
 import Parser from 'html-react-parser'
 import PaginationButtons from './PaginationButtons'
 
@@ -24,7 +24,9 @@ export default function WebSearchResults({ results }) {
 					<p className='text-pink-100'>{Parser(result.htmlSnippet)}</p>
 				</div>
 			))}
-			<PaginationButtons />
+			<Suspense>
+				<PaginationButtons />
+			</Suspense>
 		</div>
 	)
 }
